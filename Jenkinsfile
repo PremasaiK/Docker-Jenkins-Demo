@@ -90,7 +90,17 @@ pipeline {
       }
 
 	}
+stage('Remove Unused Images') {
 
+      steps{
+	  script {
+			sh "docker image prune -a"
+		}
+      }
+
+    }
+    
+	  
   }
 
 }
