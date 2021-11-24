@@ -59,7 +59,7 @@ pipeline {
 
       steps{
 	  script {
-			sh '''
+			bat '''
 
 			a="$(docker container ls --format="{{.ID}}\t{{.Ports}}" | grep "8000" | awk '{print $1}')"
 
